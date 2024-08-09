@@ -1,0 +1,13 @@
+# Cypress
+cypress/downloads/
+cypress/screenshots/
+cypress/videos/
+cypress/config/*.json
+
+node_modules/
+package-lock.json
+.npm
+
+reports/**
+
+*.idea
