@@ -9,5 +9,7 @@ package-lock.json
 .npm
 
 reports/**
+allure-results/**
+allure-report/**
 
 *.idea
