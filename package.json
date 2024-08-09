@@ -1,0 +1,30 @@
+{
+    "name": "cypress-allure-influxdb-grafana-nodashboard-environment-dispatch",
+    "version": "1.0.0",
+    "description": "Sample framework created using Cypress",
+    "main": "index.js",
+    "scripts": {
+      "test:apiTests": "npx cypress run --spec cypress/e2e/api-tests/",
+      "test:uiTests": "npx cypress run --spec cypress/e2e/ui-tests/",
+      "test:all": "npx cypress run"
+    },
+    "author": "Shaik Bikarsha",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/sdet-bikarsha/cypress-allure-influxdb-grafana-nodashboard-environment-dispatch"
+    },
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/sdet-bikarsha/cypress-allure-influxdb-grafana-nodashboard-environment-dispatch/issues"
+    },
+    "homepage": "https://github.com/sdet-bikarsha/cypress-allure-influxdb-grafana-nodashboard-environment-dispatch/#readme",
+    "devDependencies": {
+      "cypress": "^13.13.2",
+      "npm": "^10.8.2",
+      "@faker-ja/faker": "^8.4.1",
+      "allure-commandline": "^2.30.0",
+      "@cypress/grep": "^4.1.0",
+      "@mmisty/cypress-allure-adapter": "^2.6.2",
+      "path" : "^0.12.7"
+    }
+  }
