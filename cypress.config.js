@@ -1,6 +1,6 @@
 const path = require('path');
 const { defineConfig } = require("cypress");
-import { configureAllureAdapterPlugins } from '@mmisty/cypress-allure-adapter/plugins';
+const { configureAllureAdapterPlugins } = require('@mmisty/cypress-allure-adapter/plugins');
 
 module.exports = defineConfig({
     experimentalWebKitSupport: true,
@@ -12,16 +12,17 @@ module.exports = defineConfig({
         allure: true,
         allureSkipCommands: 'wrap',
         allureResults: 'allure-results',
+        URL: 'https://naveenautomationlabs.com/opencart/index.php?route=account/register'
     },
 
     e2e: {
-        baseUrl: 'https://localhost:8080/',
+        baseUrl: 'https://naveenautomationlabs.com/opencart/index.php?route=account/login',
         specPattern: 'cypress/e2e/**/*.spec.js',
         video:true,
         setupNodeEvents(on, config) {
             const reporter = configureAllureAdapterPlugins(on, config);
 
-            on('after: spec', async (spec, results) => {
+            on('after:spec', async (spec, results) => {
                 await reporter.afterSpec({ results });     
             })
                 
@@ -48,7 +49,7 @@ module.exports = defineConfig({
             } catch (error) {
                 console.log( 'No environment specific config defined, using root cypress.json config.' );
             }
-            return finalconfig;
+            return finalConfig;
         },
     },
 })
